@@ -52,10 +52,20 @@ function CheckoutForm() {
       }),
     });
 
+    if (response.ok) {
+      alert('Your payment was successful!');
+      window.location.replace('/');      
+    } else {
+      setError(response.statusText);
+      console.log("ERROR");
+    }
+/*
     if (!response.ok) {
       setError(response.statusText);
-      console.log("SUCCESS")
+      console.log("Error");
+    } else
     }
+*/
 
     // OTHER stripe methods you can use depending on app
     // // or createPaymentMethod - https://stripe.com/docs/js/payment_intents/create_payment_method

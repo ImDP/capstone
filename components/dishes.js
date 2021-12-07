@@ -15,8 +15,9 @@ function Dishes({restId}){
   const [restaurantID, setRestaurantID] = useState()
   const {addItem} = useContext(AppContext)
 
+  
 const GET_RESTAURANT_DISHES = gql`
-  query($id: ID!) {
+ query($id: ID!) {
     restaurant(id: $id) {
       id
       name
@@ -33,6 +34,26 @@ const GET_RESTAURANT_DISHES = gql`
   }
 `;
 
+/*
+const GET_RESTAURANT_DISHES = gql`
+query {
+  restaurants {
+  id
+  name
+  dishes {
+    id
+    name
+    description
+    price
+    image {
+      url
+    }
+  }
+}
+} 
+`;
+*/
+
   const router = useRouter();
 
   const { loading, error, data } = useQuery(GET_RESTAURANT_DISHES, {
@@ -40,12 +61,12 @@ const GET_RESTAURANT_DISHES = gql`
   });
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>ERROR here</p>;
+  if (error) return <p>Select a restaurant to view dishes available!</p>;
   if (!data) return <p>Not found</p>;
 
   let restaurant = data.restaurant;
 
-  if (restId > 0){
+  if (restId !=null){
 
     return (
       <>
