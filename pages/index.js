@@ -4,17 +4,6 @@ import { ApolloProvider, ApolloClient, HttpLink, InMemoryCache } from '@apollo/c
 import RestaurantList from '../components/restaurantList';
 import { InputGroup, InputGroupAddon, Input } from "reactstrap";
 
-const { ApolloServerPluginLandingPageGraphQLPlayground } = require('apollo-server-core');
-
-const server = new ApolloServer({
-    typeDefs,
-    resolvers,
-    plugins: [
-        ApolloServerPluginLandingPageGraphQLPlayground({
-            // options
-        })
-    ]
-});
 
 
 function Home() {
