@@ -38,7 +38,8 @@ function Login(props) {
         <Col sm="12" md={{ size: 5, offset: 3 }}>
           <div className="paper">
             <div className="header">
-              <h2>Login</h2>
+              
+              <img src="https://res.cloudinary.com/imdp/image/upload/c_scale,w_63/v1639076457/thumbnail_mit_2f80e56437.png" />
             </div>
             <section className="wrapper">
               {Object.entries(error).length !== 0 &&

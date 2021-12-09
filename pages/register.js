@@ -26,7 +26,7 @@ const Register = () => {
         <Col sm="12" md={{ size: 5, offset: 3 }}>
           <div className="paper">
             <div className="header">
-              <img src="http://localhost:1337/uploads/5a60a9d26a764e7cba1099d8b157b5e9.png" />
+              <img src="https://res.cloudinary.com/imdp/image/upload/c_scale,w_63/v1639076457/thumbnail_mit_2f80e56437.png" />
             </div>
             <section className="wrapper">
               {Object.entries(error).length !== 0 &&
